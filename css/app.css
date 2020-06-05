@@ -1,0 +1,20 @@
+body {
+  background: grey;
+  color: black;
+  transition: all 1s ease; }
+
+nav {
+  background: #0f0f99; }
+  nav a {
+    color: #990033; }
+
+.parent {
+  margin: 9px; }
+  .parent_title {
+    color: #987333; }
+  .parent_body {
+    color: #999000; }
+  .parent_foot {
+    color: black; }
+
+/*# sourceMappingURL=app.css.map */

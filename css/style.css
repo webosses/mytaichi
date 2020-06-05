@@ -1,0 +1,670 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+:root {
+    --primaryColor: rgb(255, 124, 10);
+    --primaryLight: #FFFFFC;
+    --primaryGray: rgb(190, 183, 164);
+    --darkRed: #601E06;
+    --black: #000;
+    --ctnBg: #FF7C0A;
+    --light: #D9D28D;
+}
+
+
+* {
+    transition: all 1s ease;
+}
+
+html {
+    font-size: calc(12px + 0.8vw);
+}
+
+body {
+    background: grey;
+    font-family: 'Pacifico', cursive;
+}
+
+.title {
+    font-size: 3rem;
+    color: var(--primaryLight);
+}
+
+/*maginific popup */
+.mfp-content {
+    width: 60vw;
+    height: 60vh;
+    overflow: hidden;
+
+
+}
+
+.mfp-img {
+    width: 100% !important;
+
+    height: 100% important;
+    outline: 1rem solid white;
+}
+
+/*end maginific popup*/
+
+
+header,
+section {
+    min-height: 100vh;
+    position: relative;
+}
+
+/*
+section {
+    box-shadow: 5px 5px 10px rgb(0, 0, 0);
+}
+*/
+section {
+    display: grid;
+}
+
+header {
+
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("//unspash.it/400")center/cover no-repeat;
+
+}
+
+.primary-color {
+    color: var(--primaryColor);
+}
+
+.arrow {
+    background: var(--primaryColor);
+    color: var(--primaryLight);
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    animation: fromBottom;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+.header-link {
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+
+}
+
+.arrow:hover {
+    filter: brightness(150%);
+}
+
+@keyframes fromBottom {
+    0% {
+        transform: translateY(-10px);
+
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+nav {
+    background: rgba(0, 0, 0, 0.5);
+    /*    outline: 0.5em dotted var(--darkRed);*/
+
+}
+
+.navbar {
+    padding: 0 2em;
+
+}
+
+.navbar-nav a {
+    font-size: 1.5rem;
+    color: var(--primaryLight);
+}
+
+.navbar-nav a:hover {
+    color: var(--primaryColor);
+    /*filter: brightness(80%) drop-shadow(1px 1px 3px rgba(255, 255, 255, 0.5));*/
+}
+
+.navbar-toggler {
+    color: var(--primaryColor);
+    opacity: 0.8;
+}
+
+
+.navbar-brand {
+    color: var(--primaryColor);
+    font-size: 2rem;
+}
+
+.navbar-brand:hover {
+    color: #fff;
+}
+
+.navbar-brand:hover .title {
+    color: var(--primaryColor);
+}
+
+.info {
+    min-height: 81.6px;
+    background: rgba(190, 183, 164, 0.5);
+
+
+}
+
+
+.info h3 {
+    font-size: calc(1rem + 1vw);
+    text-align: center;
+}
+
+.icon {
+    font-size: 2rem;
+    color: var(--darkRed);
+}
+
+.icon:hover {
+    color: var(--primaryColor);
+}
+
+/*
+.banner {
+    margin-top: 50vh;
+    transform: translate(0, -50%);
+}
+*/
+.height {
+    min-height: calc(100vh - 81.6px);
+}
+
+section h1 {
+    text-align: center;
+    padding: 1em;
+
+
+}
+
+.devider {
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    z-index: 99;
+}
+
+.devider-ang {
+    position: relative;
+
+    /*    margin-top: 10rem !important;*/
+
+
+}
+
+.devider-ang::before,
+.devider-ang::after {
+    content: ' ';
+
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    bottom: 0;
+
+
+    background: var(--ctnBg);
+
+}
+
+.devider-ang::before {
+    transform: skewY(-25deg);
+    left: 50%;
+}
+
+.devider-ang::after {
+    transform: skewY(25deg);
+    right: 50%;
+
+}
+
+.section-divider {
+    margin-top: 5rem;
+}
+
+
+.section-divider::after {
+    content: 'mr. sushi';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    /*    margin-bottom: -0.2rem;*/
+    /*    transform: skewY(45deg);*/
+    background: black;
+    transform: translate(-50%, 50%);
+    background: var(--ctnBg);
+    filter: drop-shadow(5px 5px 8px rgba(0, 0, 0, 0.5));
+    /*    z-index: -1;*/
+    margin: auto auto;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+
+}
+
+.section-divider::after {
+
+    right: 50%;
+}
+
+/*animation*/
+@keyframes fromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.btn-order {
+    display: block;
+    background: transparent;
+    border: 0.2rem solid #000;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    animation: fromRight;
+    animation-delay: 0.1s;
+    animation-duration: 1s;
+    transition: all 2s linear;
+    animation-fill-mode: forwards;
+}
+
+
+.btn-order:hover {
+    border-color: var(--primaryColor);
+    color: var(--primaryColor);
+}
+
+.banner h1 {
+
+    font-size: 3rem;
+    padding: 1rem 1.5rem;
+    width: 60vw;
+    max-width: 20rem;
+    margin: auto auto;
+    border-top: 0.5rem dotted rgba(255, 255, 255, 0.5);
+    border-bottom: 0.5rem dotted rgba(255, 255, 255, 0.5);
+    color: var(--primaryColor);
+    text-transform: capitalize;
+    opacity: 0;
+    animation: fromLeft;
+    animation-delay: 0.1s;
+    animation-duration: 1s;
+    transition: all 2s linear;
+    animation-fill-mode: forwards;
+}
+
+.banner h1::after,
+.navbar-brand::after {
+    content: "m";
+    background: var(--primaryColor);
+    padding: 0.2em 0.5em;
+    font-size: 0.3em;
+    border-radius: 0.2rem;
+    margin-left: 0.8em;
+    color: #fff;
+
+
+}
+
+.navbar-brand::after {
+    margin-left: 0.2rem;
+}
+
+.banner h1 strong {
+    font-size: 5rem;
+}
+
+/*section special*/
+
+#special {
+    background: var(--light);
+    --ctnBg: var(--light);
+}
+
+.special-item {
+    position: relative;
+    min-width: 30%;
+    height: 400px;
+    overflow: hidden;
+    text-align: center;
+    background: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 255));
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+    border: 0.5rem solid white;
+    border-radius: 0.5rem;
+
+
+
+}
+
+.special-item img {
+    width: 100%;
+    height: 100%;
+
+    /*    object-fit: contain;*/
+}
+
+.item-link {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 1rem;
+    transform: translate(-50%, -50%);
+    text-decoration: none !important;
+    color: var(--primaryColor);
+    opacity: 0;
+}
+
+.item-link:hover {
+    color: white;
+}
+
+
+
+
+
+.special-item:hover .item-link {
+    opacity: 1;
+}
+
+.special-item:hover {
+    outline: 1rem solid rgba(255, 124, 10, 0.5);
+    outline-offset: -2rem;
+}
+
+.special-item:hover img {
+    transform: scale(1.1);
+    opacity: 0.5;
+}
+
+/*end of section special*/
+
+
+
+/*menu section */
+
+#menu {
+    background: var(--primaryLight);
+
+    --ctnBg: var(--primaryLight);
+}
+
+.menu-title {
+    font-size: 2rem;
+}
+
+.menu-special {
+    position: relative;
+    border: 0.2rem solid var(--primaryColor);
+}
+
+.special-text {
+    position: absolute;
+    top: 0;
+    right: 2rem;
+    font-size: 1rem;
+
+    padding: 0.5em;
+    background: var(--primaryColor);
+    color: white;
+}
+
+.menu-item-text h2 {
+    font-size: 1rem !important;
+    position: relative;
+    margin-bottom: 2rem;
+
+
+}
+
+.menu-item-text h2::after {
+    content: " ";
+    position: absolute;
+    bottom: -1rem;
+    left: 0;
+    width: 90%;
+    height: 0.2rem;
+    background: linear-gradient(90deg, rgba(255, 0, 0, 0.5), rgba(255, 255, 0, 0.2));
+}
+
+.menu-item-text h4 {
+    font-size: 1rem;
+}
+
+.menu-item-price {
+    color: var(--primaryColor);
+}
+
+/*end of menu section*/
+
+
+/*about section*/
+#about {
+    background: var(--primaryColor);
+
+}
+
+.about-text {
+    color: var(--primaryGray);
+    filter: brightness(120%);
+}
+
+.main-btn {
+
+    border: 0.2rem solid white;
+    color: white;
+    background: transparent;
+
+}
+
+.main-btn:hover {
+    color: var(--primaryColor);
+    background: white;
+}
+
+.about-images {
+    position: relative;
+}
+
+.about-img {
+    position: absolute;
+    --startPos: 10%;
+    width: 35vh;
+    height: 30vh;
+    top: var(--startPos);
+    left: var(--startPos);
+
+
+}
+
+.about-images:hover img:not(:hover) {
+    opacity: 0.5;
+}
+
+.about-img:hover {
+    outline: 1rem solid var(--primaryColor);
+    outline-offset: 0.8rem;
+    transform: scale(1.2) rotate(20deg);
+    opacity: 1;
+    z-index: 90;
+
+}
+
+.img-1 {
+
+
+    top: var(--startPos);
+    left: var(--startPos);
+}
+
+.img-2 {
+
+
+    top: calc(var(--startPos) + 17vh);
+    left: calc(var(--startPos) + 20vh);
+    z-index: 10;
+}
+
+.img-3 {
+
+
+    top: var(--startPos);
+    left: calc(var(--startPos) + 40vh);
+}
+
+.img-4 {
+
+
+    top: calc(var(--startPos) + 35vh);
+    left: calc(var(--startPos) + 40vh);
+}
+
+.img-5 {
+
+    top: calc(var(--startPos) + 35vh);
+    left: var(--startPos);
+}
+
+
+/*end of about section*/
+
+/*review section*/
+
+#review {
+    background: var(--primaryGray);
+    --ctnBg: var(--primaryGray);
+    /*    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%);*/
+}
+
+.review-img {
+    width: 30vw;
+}
+
+/*end of review section*/
+
+/*team section*/
+#team {
+    background: var(--darkRed);
+    --ctnBg: var(--darkRed);
+
+}
+
+.card {
+    z-index: 2;
+}
+
+.card h2 {
+    font-size: 1.5rem;
+}
+
+.team-footer-icons a {
+    font-size: 1.5rem;
+    color: var(--ctnBg);
+}
+
+.team-footer-icons a:hover {
+    filter: brightness(200%);
+}
+
+/*end of team section*/
+
+/*contact section*/
+
+#contact {
+    /*    background: var(--black);*/
+
+}
+
+.contact h1 {
+    color: var(--primaryColor);
+    filter: drop-shadow(0 0 0.5rem rgba(0, 0, 0, 0.8));
+}
+
+.contact .card {
+    opacity: 0.8;
+}
+
+.contact .card-header {
+    color: var(--primaryColor);
+}
+
+.input-group-prepend span {
+    background: var(--primaryColor);
+    color: white;
+}
+
+.contact .btn {
+    background: var(--primaryColor) !important;
+}
+
+.contact .btn:hover {
+    background: transparent !important;
+    color: var(--primaryColor);
+    outline: 0.25rem solid var(--primaryColor);
+
+}
+
+
+
+
+/*end of contact section*/
+
+footer {
+    position: relative;
+    background: black;
+    min-height: 2rem;
+    color: var(--primaryGray);
+    padding: 1rem;
+    font-size: 1.2rem;
+
+}
+
+footer a {
+    color: var(--primaryGray);
+}
+
+footer a:hover {
+    color: var(--primaryColor);
+}
+
+.bottom-link {
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+
+
+}

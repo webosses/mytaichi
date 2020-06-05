@@ -1,0 +1,32 @@
+body {
+    background: grey;
+    color: black;
+    transition: all 1s ease;
+
+}
+
+nav {
+    background: #0f0f99;
+
+    a {
+        color: #990033;
+    }
+
+}
+
+.parent {
+    margin: 9px;
+
+    &_title {
+        color: #987333;
+    }
+
+    &_body {
+        color: #999000;
+    }
+
+    &_foot {
+        color: black;
+    }
+
+}
