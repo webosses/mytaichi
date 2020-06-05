@@ -16,7 +16,7 @@ $(document).ready(function () {
 
         // console.log(section);
     })
-    $(window).scroll(function () {
+    const onscroll = function () {
         //console.log(this)
         let pos = this.scrollY;
         if (pos >= 466) {
@@ -48,7 +48,9 @@ $(document).ready(function () {
 
         }
         // console.log(pos)
-    })
+    }
+    $(window).on('scroll', onscroll);
+    $(document.body).on('touchmove', onscroll);
 
     $('.nav-link,.header-link,.bottom-link').on('click', function (event) {
         event.preventDefault();
