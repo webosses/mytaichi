@@ -63,9 +63,9 @@ section {
     display: grid;
 }
 
-header {
+#header {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/bg3.jpg)center/cover no-repeat;
 
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("//unspash.it/400")center/cover no-repeat;
 
 }
 
@@ -88,6 +88,7 @@ header {
     position: absolute;
     left: 50%;
     bottom: 5%;
+    /*    transform: translate(-50%, -50%);*/
 
 }
 
@@ -374,6 +375,8 @@ section h1 {
 .special-item img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
+
 
     /*    object-fit: contain;*/
 }
@@ -572,6 +575,8 @@ section h1 {
 
 .review-img {
     width: 30vw;
+    height: 30vw;
+    object-fit: cover;
 }
 
 /*end of review section*/
@@ -598,6 +603,13 @@ section h1 {
 
 .team-footer-icons a:hover {
     filter: brightness(200%);
+}
+
+.team-img {
+    width: 100% !important;
+    height: 15rem !important;
+    object-fit: cover;
+
 }
 
 /*end of team section*/
