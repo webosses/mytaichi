@@ -29,7 +29,7 @@ $(document).ready(function () {
 
         const posSpec = parseInt($('#special').offset().top);
         const posContact = parseInt($('#contact').offset().top);
-        //        console.log(posSpec, posContact)
+        console.log(posSpec, posContact)
         if (pos >= posSpec && pos <= posContact) {
             //            console.log(pos, posSpec, posContact)
             $('.header-link').css({
@@ -53,8 +53,8 @@ $(document).ready(function () {
     $(document.body).on('touchmove', onscroll);
 
     $('.nav-link,.header-link,.bottom-link').on('click', function (event) {
-        event.preventDefault();
-        //const link = event.target;
+        //  event.preventDefault();
+        const link = event.target;
         const target = $(this).attr('href');
         const otop = document.querySelector(target).offsetTop;
         const jtop = $(target).offset().top;
