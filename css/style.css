@@ -21,7 +21,7 @@ html {
 
 body {
     background: grey;
-    font-family: 'Pacifico', cursive;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .title {
@@ -63,10 +63,9 @@ section {
     display: grid;
 }
 
-#header {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/bg3.jpg)center/cover no-repeat;
+header {
 
-
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(/img/banner.jpg)right/cover no-repeat;
 }
 
 .primary-color {
@@ -88,7 +87,6 @@ section {
     position: absolute;
     left: 50%;
     bottom: 5%;
-    /*    transform: translate(-50%, -50%);*/
 
 }
 
@@ -123,8 +121,9 @@ nav {
 }
 
 .navbar-nav a {
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: var(--primaryLight);
+    padding:2rem 0;
 }
 
 .navbar-nav a:hover {
@@ -290,24 +289,40 @@ section h1 {
         opacity: 1;
     }
 }
+.h2_title{
+    margin:2em 0 1em 0;
+}
 
+.section_desc{
+    background-color: #eee;
+    padding:1em;
+    margin-bottom: 3em;
+}
+a{
+    color:#eee;
+    text-decoration: none;
+}
 .btn-order {
     display: block;
     background: transparent;
-    border: 0.2rem solid #000;
-    padding: 0.5em 1em;
+    border: 2px solid #eee;
+    padding: 0.5em 2em;
     cursor: pointer;
     animation: fromRight;
     animation-delay: 0.1s;
     animation-duration: 1s;
-    transition: all 2s linear;
+    transition: all 1s linear;
     animation-fill-mode: forwards;
-}
+    color:#eee;}
 
 
 .btn-order:hover {
     border-color: var(--primaryColor);
     color: var(--primaryColor);
+}
+.btn-order a:hover{
+    color:#fff;
+    text-decoration: none;
 }
 
 .banner h1 {
@@ -328,10 +343,10 @@ section h1 {
     transition: all 2s linear;
     animation-fill-mode: forwards;
 }
-
+/* 
 .banner h1::after,
 .navbar-brand::after {
-    content: "m";
+    content: "";
     background: var(--primaryColor);
     padding: 0.2em 0.5em;
     font-size: 0.3em;
@@ -340,7 +355,7 @@ section h1 {
     color: #fff;
 
 
-}
+} */
 
 .navbar-brand::after {
     margin-left: 0.2rem;
@@ -357,6 +372,13 @@ section h1 {
     --ctnBg: var(--light);
 }
 
+.head_desc{
+   color:white;
+   padding-left:1em;
+   line-height: 1.5em;
+   text-align:left;
+}
+
 .special-item {
     position: relative;
     min-width: 30%;
@@ -365,7 +387,7 @@ section h1 {
     text-align: center;
     background: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 255));
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
-    border: 0.5rem solid white;
+    /* border: 0.5rem solid white; */
     border-radius: 0.5rem;
 
 
@@ -375,8 +397,6 @@ section h1 {
 .special-item img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-
 
     /*    object-fit: contain;*/
 }
@@ -420,7 +440,7 @@ section h1 {
 
 /*menu section */
 
-#menu {
+#available_taichi_chigong_courses {
     background: var(--primaryLight);
 
     --ctnBg: var(--primaryLight);
@@ -432,7 +452,8 @@ section h1 {
 
 .menu-special {
     position: relative;
-    border: 0.2rem solid var(--primaryColor);
+    border: 2px dotted var(--primaryColor);
+    border-radius: 0.5em;
 }
 
 .special-text {
@@ -443,9 +464,11 @@ section h1 {
 
     padding: 0.5em;
     background: var(--primaryColor);
-    color: white;
+    color: #efe;
 }
-
+.head_address{
+    font-size:1rem;
+}
 .menu-item-text h2 {
     font-size: 1rem !important;
     position: relative;
@@ -453,14 +476,54 @@ section h1 {
 
 
 }
+.other_option{
+    
+    padding:2rem;
+    
+}
 
+.other_option a{
+    color:var(--primaryColor);
+}
+
+.other_option div{
+    background-color: var(--light);
+    border-radius:30%;
+    padding:2em;
+
+
+}
+.colored{
+    color: var(--primaryColor);
+}
+                
+.lesson_ctn{
+    background: white;
+    opacity: 0.5;
+    padding:1rem;
+    margin-top:1em;
+    list-style: none;
+
+}
+
+.lesson span{
+  font-weight: bold;
+}
+.other_option div h4{
+    /* background-color:var(--ctnBg); */
+    border-bottom: 2px solid #000;
+    border-radius:30%;
+    padding:0.2em;
+
+    text-align: center;
+}
 .menu-item-text h2::after {
     content: " ";
     position: absolute;
     bottom: -1rem;
     left: 0;
     width: 90%;
-    height: 0.2rem;
+    height: 0.1rem;
     background: linear-gradient(90deg, rgba(255, 0, 0, 0.5), rgba(255, 255, 0, 0.2));
 }
 
@@ -475,10 +538,23 @@ section h1 {
 /*end of menu section*/
 
 
+.lesson{
+    background: rgba(190, 183, 164);
+    --ctnBg: rgba(190, 183, 164);
+
+}
+.logo{
+   
+}
+
+
 /*about section*/
 #about {
     background: var(--primaryColor);
 
+}
+.about li{
+    margin:1rem;
 }
 
 .about-text {
@@ -575,8 +651,6 @@ section h1 {
 
 .review-img {
     width: 30vw;
-    height: 30vw;
-    object-fit: cover;
 }
 
 /*end of review section*/
@@ -603,13 +677,6 @@ section h1 {
 
 .team-footer-icons a:hover {
     filter: brightness(200%);
-}
-
-.team-img {
-    width: 100% !important;
-    height: 15rem !important;
-    object-fit: cover;
-
 }
 
 /*end of team section*/
